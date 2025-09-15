@@ -1,2 +1,3 @@
 # ronni_cardealer
-This is a Cardealer Script by ChatGPT inclusive the ronni_platesystem for now ist Open source
+This is a Car Dealer script by ChatGPT including the ronni_platesystem. For now, it is open source.
+
