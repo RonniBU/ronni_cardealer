@@ -1,77 +1,47 @@
-# Car Dealer Script (inklusive ronni_platesystem)
+# ronni_cardealer (inklusive ronni_platesystem)
 
-## Deutsch
+## Deutsch 🇩🇪
 
-Dies ist ein **Car Dealer Script**, erstellt mit Unterstützung von ChatGPT und integriertem **ronni_platesystem**.  
-Das Script ist aktuell **Open Source** und kann frei genutzt und angepasst werden.
+Dies ist das **ronni_cardealer Script**, entwickelt mit Unterstützung von ChatGPT.  
+Es kombiniert ein realistisches **Autohaus-/Händler-System** mit integriertem **ronni_platesystem** und unterstützt **sh59_keysystem + esx_carlock** für Schlüsselverwaltung.  
 
----
-
-### Features
-- 🚗 **Fahrzeughändler-System**: Spieler können Fahrzeuge direkt bei einem Händler kaufen.  
-- 🔑 **ronni_platesystem Integration**: Automatische Vergabe von einzigartigen Kennzeichen.  
-- 💾 **Persistente Speicherung**: Fahrzeuge bleiben nach dem Neustart des Servers im Besitz der Spieler.  
-- 🛠️ **Konfigurierbar**: Händlerstandorte, Fahrzeugpreise und verfügbare Modelle sind einfach anpassbar.  
-- 👨‍👩‍👧 **Rang-/Job-System (optional)**: Nur bestimmte Jobs oder Gruppen können Fahrzeuge erwerben (z. B. Polizei, Taxi).  
-- 📜 **Einfache Erweiterung**: Sauberer Code erleichtert eigene Anpassungen.
+Das Script ist **Open Source** und kann frei genutzt und angepasst werden.  
 
 ---
 
-### Voraussetzungen
-- **FiveM-Server** (aktuelle Version)  
-- **ronni_platesystem** (muss installiert und gestartet sein)  
-- **MySQL / oxmysql**
-- **ESX**  
+### 🚀 Features
+- 🏢 **Showroom-System**: Fahrzeuge können im Showroom (via `vector4`) ausgestellt werden.  
+- 📖 **Fahrzeug-Katalog**: Spieler können Fahrzeuge durchblättern und ansehen (nicht einsteigen).  
+- 🤝 **Vertragsbasiertes Verkaufssystem**:  
+  - Spieler können Fahrzeuge nur mit einem **Contract-Item** verkaufen.  
+  - Händler-Jobs (z. B. `cardealer`) können ohne Contract verkaufen.  
+- 🔑 **Schlüssel-Integration**: Automatische Schlüsselübergabe mit **sh59_keysystem** + **esx_carlock**.  
+- 🚗 **Kennzeichen-System** (via `ronni_platesystem`):  
+  - Vorläufige Kennzeichen bei Autohaus-Kauf (7 Tage gültig).  
+  - Wunschkennzeichen oder Zufallskombination.  
+  - Möglichkeit, Kennzeichen mit Item („Klebeband“) abzudecken.  
+- 👔 **Boss-Menü**: Geld einzahlen/auszahlen, Job-Kasse verwalten.  
+- ⚙️ **Konfigurierbar**:  
+  - Inventarsystem (ox_inventory oder ESX Inventory).  
+  - Job-Restriktionen.  
+  - Showroom-Positionen, Katalog-Fahrzeuge und mehr.  
+- 💾 **Persistente Speicherung**: Fahrzeuge bleiben nach Neustart im Besitz.  
 
 ---
 
-### Installation
+### 📦 Voraussetzungen
+- **FiveM Server** (aktuelle Version)  
+- **ESX** (aktuelle Version)  
+- **oxmysql**  
+- **ronni_platesystem** (für Kennzeichenverwaltung)  
+- **sh59_keysystem** + **esx_carlock Fork** (für Fahrzeugschlüssel)  
+
+---
+
+### ⚙️ Installation
 1. Lade das Script in deinen `resources`-Ordner.  
-2. Stelle sicher, dass **ronni_platesystem** korrekt installiert ist.  
-3. Füge das Script in deiner `server.cfg` hinzu:  
-4. Starte den Server neu.  
-
----
-
-### Lizenz
-Dieses Projekt ist aktuell **Open Source**.  
-Bitte respektiere die Urheber und nenne sie, wenn du Änderungen veröffentlichst.
-
----
-
-## English
-
-This is a **Car Dealer Script**, created with the help of ChatGPT and including the **ronni_platesystem**.  
-The script is currently **open source** and can be used and modified freely.
-
----
-
-### Features
-- 🚗 **Vehicle Dealer System**: Players can purchase vehicles directly from a dealer.  
-- 🔑 **ronni_platesystem Integration**: Automatic generation of unique license plates.  
-- 💾 **Persistent Storage**: Vehicles remain owned by players even after server restarts.  
-- 🛠️ **Configurable**: Dealer locations, vehicle prices, and available models are easy to customize.  
-- 👨‍👩‍👧 **Rank/Job System (optional)**: Restrict vehicle purchases to specific jobs/groups (e.g. police, taxi).  
-- 📜 **Easy to Extend**: Clean code structure for your own modifications.
-
----
-
-### Requirements
-- **FiveM server** (latest version)  
-- **ronni_platesystem** (must be installed and running)  
-- **MySQL / oxmysql**
-- **ESX**
-
----
-
-### Installation
-1. Download the script into your `resources` folder.  
-2. Make sure **ronni_platesystem** is properly installed.  
-3. Add the script to your `server.cfg`:  
-4. Restart your server.  
-
----
-
-### License
-This project is currently **open source**.  
-Please respect the authors and give credit if you publish modifications.
+2. Stelle sicher, dass **ronni_platesystem**, **sh59_keysystem** und **esx_carlock** installiert sind.  
+3. Importiere die SQL-Dateien (Items wie „vertrag“, optional Icons in ox_inventory).  
+4. Trage das Script in deiner `server.cfg` ein:  
+   ```cfg
+   ensure ronni_cardealer
